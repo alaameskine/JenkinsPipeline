@@ -19,5 +19,14 @@ pipeline {
       }
     }
 
+    stage('Change directory') {
+      steps {
+        dir(path: 'https://github.com/alaameskine/flexbox') {
+          sh 'echo "Hello flexbox"'
+        }
+
+      }
+    }
+
   }
 }
