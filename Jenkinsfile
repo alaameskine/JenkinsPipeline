@@ -22,6 +22,7 @@ pipeline {
     stage('Determine dir') {
       steps {
         pwd(tmp: true)
+        sh 'echo pwd'
       }
     }
 
