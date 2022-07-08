@@ -24,11 +24,9 @@ pipeline {
         pwd(tmp: true)
       }
     }
-
-    stage('Catching errors') {
-      steps {
-        load 'C:\\Groovy\\New Pipeline\\Jenkins-Pipelines'
-        error 'There is no groovy file!'
+     post {
+      always {
+          junit 'build/reports/**/*.xml'
       }
     }
   }
