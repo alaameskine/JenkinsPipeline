@@ -20,9 +20,33 @@ pipeline {
     }
 
     stage('Determine dir') {
-      steps {
-        pwd(tmp: true)
+      parallel {
+        stage('Determine dir2') {
+          steps {
+            pwd(tmp: true)
+          }
+        }
+
+        stage('Determine dir3') {
+          steps {
+            pwd(tmp: true)
+          }
+        }
+
+        stage('Determine dir 4') {
+          steps {
+            pwd(tmp: true)
+          }
+        }
+
+        stage('Determine dir 5') {
+          steps {
+            pwd(tmp: true)
+          }
+        }
+
       }
     }
+
   }
 }
