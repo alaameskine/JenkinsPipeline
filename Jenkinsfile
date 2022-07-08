@@ -31,6 +31,10 @@ pipeline {
         error 'There is no groovy file!'
       }
     }
-
+    post {
+      always {
+          junit 'build/reports/**/*.xml'
+      }
+    }
   }
 }
