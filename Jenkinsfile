@@ -25,11 +25,5 @@ pipeline {
       }
     }
 
-    stage('Evaluate file.groovy') {
-      steps {
-        load 'C:\\Groovy\\New Pipeline\\Jenkins-Pipelines'
-      }
-    }
-
   }
 }
