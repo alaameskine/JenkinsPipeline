@@ -3,25 +3,31 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'echo "Building"'
+        bat(script: 'echo "Building"', returnStatus: true, returnStdout: true)
       }
     }
 
     stage('Test') {
       steps {
-        bat 'echo "Testing"'
+        bat(script: 'echo "Testing"', returnStatus: true, returnStdout: true)
       }
     }
 
     stage('Deploy') {
       steps {
-        bat 'echo "Deploying"'
+        bat(script: 'echo "Deploying"', returnStatus: true, returnStdout: true)
       }
     }
 
     stage('Determine dir') {
       steps {
         pwd(tmp: true)
+      }
+    }
+
+    stage('Evaluate file.groovy') {
+      steps {
+        load 'C:\\Groovy\\New Pipeline\\Jenkins-Pipelines'
       }
     }
 
