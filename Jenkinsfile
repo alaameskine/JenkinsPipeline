@@ -25,12 +25,6 @@ pipeline {
       }
     }
 
-    stage('Repeat') {
-      steps {
-        retry(count: 3)
-      }
-    }
-
     stage('Catching errors') {
       steps {
         load 'C:\\Groovy\\New Pipeline\\Jenkins-Pipelines'
