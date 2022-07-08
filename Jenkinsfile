@@ -33,13 +33,13 @@ pipeline {
           }
         }
 
-        stage('Determine dir 4') {
+        stage('Determine dir4') {
           steps {
             pwd(tmp: true)
           }
         }
 
-        stage('Determine dir 5') {
+        stage('Determine dir5') {
           steps {
             pwd(tmp: true)
           }
