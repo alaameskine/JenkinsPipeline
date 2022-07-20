@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        bat 'echo "Building"'
+        sh 'echo "Building"'
       }
     }
 
     stage('Test') {
       steps {
-        bat 'echo "Testing"'
+        sh 'echo "Testing"'
       }
     }
 
     stage('Deploy') {
       steps {
-        bat 'echo "Deploying"'
+        sh 'echo "Deploying"'
       }
     }
 
