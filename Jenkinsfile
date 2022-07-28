@@ -1,23 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('Build') {
+    stage('Loop') {
       steps {
-        sh 'echo "Building"'
-      }
-    }
+        script {
+          allModules.each(){
+            echo it }
+          }
 
-    stage('Test') {
-      steps {
-        sh 'echo "Testing"'
+        }
       }
-    }
 
-    stage('Deploy') {
-      steps {
-        sh 'echo "Deploying"'
-      }
     }
-
+    environment {
+      module1 = '1'
+      module2 = '2'
+      module3 = '3'
+      module4 = '4'
+    }
   }
-}
