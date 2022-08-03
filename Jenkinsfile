@@ -3,19 +3,19 @@ pipeline {
   stages {
     stage('Build') {
       steps {
-        sh(script: 'echo "Building"', returnStatus: true, returnStdout: true)
+        bat(script: 'echo "Building"', returnStatus: true, returnStdout: true)
       }
     }
 
     stage('Test') {
       steps {
-        sh(script: 'echo "Testing"', returnStatus: true, returnStdout: true)
+        bat(script: 'echo "Testing"', returnStatus: true, returnStdout: true)
       }
     }
 
     stage('Deploy') {
       steps {
-        sh(script: 'echo "Deploying"', returnStatus: true, returnStdout: true)
+        bat(script: 'echo "Deploying"', returnStatus: true, returnStdout: true)
       }
     }
 
