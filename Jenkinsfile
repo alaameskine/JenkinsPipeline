@@ -18,5 +18,6 @@ pipeline {
       module3 = '3'
       module4 = '4'
       module6 = '6'
+       module7 = '7'
     }
   }
