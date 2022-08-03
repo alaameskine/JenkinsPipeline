@@ -15,7 +15,7 @@ pipeline {
 
     stage('Deploy') {
       steps {
-        bat(script: 'echo "Deploying"', returnStatus: true, returnStdout: true)
+        bat(script: 'echo "Deployinggg"', returnStatus: true, returnStdout: true)
       }
     }
 
